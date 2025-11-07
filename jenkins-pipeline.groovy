@@ -8,7 +8,7 @@ pipeline {
             steps {
                 cleanWs()
                 sh 'echo ${bundle_name}'
-                git credentialsId: "git_hub_ssh", url: "git@github.com:XYZ"
+                git url: 'https://github.com/matthewgalloway/jenkins-dku-pipeline'
                 sh "cat requirements.txt"
                 sh "printenv"
                 withPythonEnv('python3') {
