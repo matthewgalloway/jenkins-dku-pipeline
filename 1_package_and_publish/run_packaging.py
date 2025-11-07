@@ -43,5 +43,5 @@ if deployer_service == "":
 ####################
 # Import the new version
 
-new_version = deployer_service.import_version(api_package_id, version_as_stream)
+new_version = deployer_service.import_version(version_as_stream)
 print("New version published as '{}'".format(api_package_id))
