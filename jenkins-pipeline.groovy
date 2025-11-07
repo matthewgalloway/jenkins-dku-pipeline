@@ -8,7 +8,7 @@ pipeline {
             steps {
                 cleanWs()
                 sh 'echo ${bundle_name}'
-                git url: 'https://github.com/matthewgalloway/jenkins-dku-pipeline'
+                git url: "https://github.com/matthewgalloway/jenkins-dku-pipeline", branch: "main"
                 sh "cat requirements.txt"
                 sh "printenv"
                 withPythonEnv('python3') {
