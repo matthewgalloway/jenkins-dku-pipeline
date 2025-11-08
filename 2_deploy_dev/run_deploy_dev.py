@@ -32,8 +32,9 @@ else:
     print("UPDATING DEPLOYMENT")
 
 # Get current status before update
+# Get current status before update
 current_status = dep_to_update.get_status()
-print(f"Current deployment '{dep_id}' on infra '{infra_dev_id}' with API package '{dep_to_update.get_settings().get_raw()['publishedProjectVersion']}' is in status '{current_status.get_health()}'")
+print(f"Current deployment '{dep_id}' is in status '{current_status.get_health()}'")
 
 # Update deployment settings
 dep_settings = dep_to_update.get_settings()
